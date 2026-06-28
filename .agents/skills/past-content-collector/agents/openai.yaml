@@ -1,0 +1,6 @@
+interface:
+  display_name: "历史内容采集"
+  short_description: "从账号主页采集历史内容并分平台归档"
+  default_prompt: "使用 $past-content-collector 根据这些账号主页链接补充历史数据并进行复盘。"
+policy:
+  allow_implicit_invocation: true

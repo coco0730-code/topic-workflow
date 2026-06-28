@@ -1,0 +1,4 @@
+interface:
+  display_name: "Agnes 生视频 V2.0"
+  short_description: "使用 Agnes Video V2.0 生成文生视频与图生视频"
+  default_prompt: "Use $agnes-video-v20 to创建一个视频生成任务，并轮询直到拿到最终视频结果。"

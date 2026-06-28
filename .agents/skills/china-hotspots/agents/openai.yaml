@@ -1,0 +1,6 @@
+interface:
+  display_name: "国内热点采集"
+  short_description: "采集国内热榜和平台讨论信号"
+  default_prompt: "使用 $china-hotspots 抓取今天国内平台热点并整理为选题素材。"
+policy:
+  allow_implicit_invocation: true

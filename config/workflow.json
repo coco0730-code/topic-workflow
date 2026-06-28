@@ -1,0 +1,9 @@
+{
+  "maxRewriteRounds": 3,
+  "defaultPlatform": "小红书",
+  "platformPriority": ["小红书", "公众号", "抖音"],
+  "dailyOutputRoot": "outputs",
+  "requireHumanTopicSelection": true,
+  "requireHumanFinalReview": true,
+  "requireHumanVisualReview": true
+}

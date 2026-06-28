@@ -1,0 +1,4 @@
+interface:
+  display_name: "知识库补全器"
+  short_description: "根据文档、官网或公司名补全项目 knowledge 目录"
+  default_prompt: "Use $knowledge-bootstrap to根据用户提供的文档、官网或公司名初始化或补充 knowledge 目录。"

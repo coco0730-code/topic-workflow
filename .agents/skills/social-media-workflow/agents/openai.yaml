@@ -1,0 +1,5 @@
+interface:
+  display_name: "Social Media Workflow"
+  short_description: "运行新媒体选题、写作、审核与视觉流程"
+  default_prompt: "Use $social-media-workflow to run today's social media topic workflow."
+

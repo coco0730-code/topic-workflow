@@ -1,0 +1,45 @@
+{
+  "dailyQueries": [
+    "TODO: 用 knowledge-bootstrap 初始化后替换为你的行业关键词 1",
+    "TODO: 用 knowledge-bootstrap 初始化后替换为你的行业关键词 2"
+  ],
+  "maxResultsPerQuery": 5,
+  "timeRange": "week",
+  "platforms": ["小红书", "公众号", "抖音"],
+  "exaWebSearch": {
+    "enabled": true,
+    "type": "auto",
+    "maxResultsPerQuery": 5,
+    "textMaxCharacters": 900,
+    "queries": [
+      "TODO: 用 knowledge-bootstrap 初始化后替换为你的中文网页搜索关键词 1",
+      "TODO: 用 knowledge-bootstrap 初始化后替换为你的中文网页搜索关键词 2"
+    ],
+    "includeDomains": [
+      "36kr.com",
+      "huxiu.com",
+      "geekpark.net",
+      "leiphone.com",
+      "ifanr.com",
+      "tmtpost.com",
+      "qbitai.com",
+      "jiqizhixin.com"
+    ]
+  },
+  "chinaHotspots": {
+    "enabled": true,
+    "apiBaseUrl": "http://120.27.249.239:6688",
+    "platforms": ["douyin", "baidu", "toutiao", "zhihu", "zhihu-daily", "36kr", "sina", "qq-news", "sina-news"],
+    "maxItemsPerPlatform": 20,
+    "manualSources": [
+      {
+        "platform": "小红书",
+        "note": "暂无稳定公开热榜接口；建议人工补充行业关键词搜索结果、对标账号爆款笔记链接、品牌评论区高频问题。"
+      },
+      {
+        "platform": "公众号",
+        "note": "建议人工补充行业公众号爆文、竞品公众号文章、客户常问问题。"
+      }
+    ]
+  }
+}

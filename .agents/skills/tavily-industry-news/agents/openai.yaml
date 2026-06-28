@@ -1,0 +1,4 @@
+interface:
+  display_name: "Tavily Industry News"
+  short_description: "用 Tavily 搜索并整理每日行业资讯"
+  default_prompt: "Use $tavily-industry-news to collect and summarize daily industry news."

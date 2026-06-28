@@ -1,0 +1,95 @@
+{
+  "company": {
+    "name": "示例公司",
+    "brand": "示例品牌",
+    "website": "https://example.com",
+    "one_liner": "一家面向企业客户提供 AI 内容工作流的公司。",
+    "positioning": [
+      "面向企业客户的 AI 工作流服务商",
+      "强调流程化和可复用能力"
+    ],
+    "businesses": [
+      "提供 AI 内容生产工作流",
+      "提供企业知识库整理和自动化服务"
+    ],
+    "proof_points": [
+      "官网可见基础产品说明"
+    ],
+    "public_constraints": [
+      "价格和客户案例暂未公开，需要确认后再写"
+    ]
+  },
+  "products": [
+    {
+      "name": "示例产品 A",
+      "audience": ["企业市场团队", "内容运营团队"],
+      "pain_points": ["内容生产效率低", "知识分散"],
+      "features": ["热点采集", "知识库补全", "内容草稿生成"],
+      "scenarios": ["日常运营", "知识沉淀"],
+      "benefits": ["减少重复整理时间", "统一内容口径"],
+      "differentiators": ["能和企业现有流程结合"]
+    }
+  ],
+  "users": [
+    {
+      "type": "企业内容负责人",
+      "roles": ["内容运营负责人", "市场负责人"],
+      "industries": ["企业服务", "AI 工具"],
+      "pain_points": ["每天选题成本高", "内容质量不稳定"],
+      "interests": ["提高内容效率", "建立标准流程"],
+      "decision_drivers": ["提升稳定性", "降低重复劳动"]
+    }
+  ],
+  "brand_voice": {
+    "style": ["专业", "务实", "克制"],
+    "preferred_phrases": ["强调流程和落地价值"],
+    "avoid_phrases": ["一键颠覆", "万能自动化"],
+    "tone_guess": ["适合专业务实型"],
+    "status": "confirmed"
+  },
+  "content_rules": {
+    "allowed": ["可讲流程、方法、场景拆解"],
+    "caution": ["涉及客户案例时先确认"],
+    "forbidden": ["不得编造案例", "不得夸大自动化效果"],
+    "red_lines": ["不得写未公开价格", "不得虚构合作背书"]
+  },
+  "keywords": {
+    "focus": "mixed",
+    "daily_queries": [
+      "AI 内容工作流 最新资讯",
+      "企业 AI 内容自动化 工具",
+      "知识库补全 AI 工作流"
+    ],
+    "exa_queries": [
+      "AI 内容工作流 国内资讯",
+      "企业 AI 内容自动化 国内",
+      "知识库补全 AI 产品 国内"
+    ],
+    "platforms": ["小红书", "公众号", "抖音"],
+    "notes": ["当前关键词为演示候选，建议用户再确认是否偏产品词或行业词"]
+  },
+  "competitors": {
+    "confirmed": [],
+    "candidates": ["竞品候选 A", "竞品候选 B"],
+    "notes": ["当前仅为基于官网的初筛结果，待用户确认"]
+  },
+  "past_content": {
+    "available": false,
+    "by_platform": [],
+    "items": [],
+    "notes": ["建议补充近 20 条历史内容和互动数据"]
+  },
+  "sources": [
+    {
+      "type": "website",
+      "label": "示例官网",
+      "path_or_url": "https://example.com",
+      "notes": "仅用于演示 merge_knowledge.py"
+    }
+  ],
+  "open_questions": [
+    "是否有明确竞品名单？",
+    "哪些客户案例可以公开写入？",
+    "行业关键词更偏产品词、行业词、痛点词，还是竞品词？"
+  ]
+}
