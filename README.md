@@ -86,6 +86,18 @@ git status --short
 跑今天的新媒体选题工作流
 ```
 
+如果你希望限定采集窗口，也可以直接在指令里说：
+
+```text
+抓最近48小时的行业资讯并跑今天的新媒体选题工作流
+```
+
+```text
+抓近3天的行业资讯
+```
+
+如果你没有特别说明时间范围，流程默认按近 7 天抓 Tavily 和 Exa 中文网页结果；国内平台热榜仍然抓当前榜单。
+
 工作流会依次完成热点采集、选题分析、文章草稿、审核、视觉提示词等步骤。中间需要人工选择选题、确认终稿和审核视觉提示词。
 
 ## 工作流介绍
@@ -104,8 +116,10 @@ knowledge-bootstrap 初始化/补全知识库与搜索关键词
 Agent1 行业新闻与国内平台热点采集
   ├─ Tavily Search API：抓行业新闻、产品动态、融资/政策/研究报告等外部资讯
   ├─ Exa Search API：按关键词抓中文网页、行业媒体、竞品动态和内容线索
+  ├─ 时间窗口：用户可直接说“最近48小时 / 近3天 / 近7天 / 本周”；不说时默认近7天。该窗口会同时作用在 Tavily 与 Exa 中文网页搜索上。
   ├─ DailyHotApi 兼容接口：抓抖音、百度、头条、知乎、36氪等国内热榜
   ├─ 人工来源：小红书、公众号、对标账号链接等非公开热榜来源可补充
+  ├─ 发布时间核实：`scripts/exa_china_web_search.py` 默认会对每条结果抓一次原页面取真日期（页面正文 / `<meta>` / JSON-LD / `<time>`），覆盖 Exa 返回的 `publishedDate`；拿不到真日期时退回 Exa 原值并标 `Exa 估算`。可在 `config/keywords.json` 的 `exaWebSearch.verifyDates` 里关掉。
   └─ 输出：news-source.md、china-web-search-source.md、china-hotspots-source.md、news.md
 ↓
 Agent2 结合公司知识库做选题分析
@@ -154,6 +168,8 @@ Agent6 调 imagegen 生图，或调 agnes-video-v20 生视频
 ### `config/keywords.json`
 
 热点采集关键词配置。初始化知识库后会根据公司、产品、行业和重点平台补充。
+
+其中 `timeRange` 是默认采集窗口；当前默认是近 7 天。用户在对话里临时指定“最近48小时”“近3天”等时间时，会优先覆盖这个默认值，不需要手动改配置文件。
 
 ### `config/workflow.json`
 

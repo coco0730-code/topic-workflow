@@ -80,6 +80,10 @@ def tavily_search(api_key: str, query: str, args: argparse.Namespace) -> dict[st
     }
     if args.time_range:
         payload["time_range"] = args.time_range
+    if args.start_date:
+        payload["start_date"] = args.start_date
+    if args.end_date:
+        payload["end_date"] = args.end_date
 
     request = urllib.request.Request(
         TAVILY_SEARCH_URL,
@@ -197,6 +201,8 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
         choices=["day", "week", "month", "year", "d", "w", "m", "y"],
         help="Optional Tavily recency window.",
     )
+    parser.add_argument("--start-date", help="Optional YYYY-MM-DD start date for Tavily search.")
+    parser.add_argument("--end-date", help="Optional YYYY-MM-DD end date for Tavily search.")
     parser.add_argument("--include-raw-content", action="store_true")
     parser.add_argument("--timeout", type=int, default=30)
     parser.add_argument(
